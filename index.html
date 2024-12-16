@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="div" >
+    <h1 style="color: brown;">Kutty..Do you Love Me?</h1>
+    <h1 id="ss"></h1>
+
+    <button id="main" onclick="fun1()" style="background-color: green; color: white; width: 80px; height: 50px;">yes</button>
+    <button id="main2" onclick="fun2()" style="background-color: red; color: white; width: 80px; height: 50px;">no</button>
+</div>
+
+    <script>
+        a1=document.getElementById("main")
+        a2=document.getElementById("main2")
+        function fun1(){
+            a=document.body.innerHTML = "<h1>I love u Tooo Kutty</h1>";   
+            
+        }
+        count=0
+        function fun2(){
+           a2.innerText="Are you Sure?"
+            count++
+
+            if(count==1){
+                a2.innerText="Think once again ?"
+            }
+            else if(count==2){
+                a2.innerText="Take another look"
+
+
+            }
+            else if(count==3){
+                a2.innerText="Examine your heart"
+            }
+            else{
+                a2.innerText="U need to love me no other options"
+            }
+            const currentWidth = parseInt(getComputedStyle(a1).width);
+            const currentHeight = parseInt(getComputedStyle(a1).height);
+
+            // Increase by 10px each time
+            a1.style.width = currentWidth + 100 + "px";
+            a1.style.height = currentHeight + 100 + "px";
+
+        }
+    
+
+    </script>
+    
+</body>
+</html>
